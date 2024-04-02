@@ -1,0 +1,21 @@
+
+
+
+    # Netflix-GPT
+       - create-react-app
+       - Configured tailwind css
+
+    # Features
+       - Login & Sign up
+           - Sign In / Sign Up From
+           - redirects to the Browse page
+       - Browse ( after Authentication )
+           - Header
+           - Main Movie 
+               - Trailer In Background
+               - Title & Description
+               - Movie Suggestions
+                  - Movie Lists * N
+       - Netflix-GPT
+           - Search Bar
+           - Movie Suggestions 
