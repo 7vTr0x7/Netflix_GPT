@@ -21,9 +21,13 @@ const Login = () => {
           placeholder="Password"
           className="p-3 m-2 w-full  bg-[#333]"
         />
-        <button className="p-4 mt-8 mb-4 mx-2  bg-[#e50914] w-full rounded-lg font-bold text-xl  ">
+        <button className="py-3 mt-8 mb-4 mx-2  bg-[#e50914] w-full rounded-lg font-bold text-xl  ">
           Sign In
         </button>
+        <div className="flex text-lg  ml-3 mt-2 ">
+          <p className=" mr-2 text-[#737373]">{"New to Netflix?"}</p>
+          <p className="cursor-pointer hover:underline">{"Sign Up Now"}</p>
+        </div>
       </form>
     </div>
   );
