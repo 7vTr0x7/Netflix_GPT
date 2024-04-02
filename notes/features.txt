@@ -5,8 +5,11 @@
        - create-react-app
        - Configured tailwind css
        - Header
+       - Routing
        - Login Form
        - Sign up Form
+       - Form Validation
+       - useRef hook
 
     # Features
        - Login & Sign up
