@@ -1,12 +1,18 @@
 import React from "react";
-import Login from "./Login";
 import Browse from "./Browse";
+import Login from "./Login";
+
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 const Body = () => {
   return (
     <div>
-      <Login />
-      <Browse />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/browse" element={<Browse />} />
+        </Routes>
+      </Router>
     </div>
   );
 };
