@@ -3,7 +3,10 @@ import Header from "./Header";
 import { BACKGROUND_IMAGE } from "../utils/constant";
 import { checkValidData, checkValidName } from "../utils/validate";
 import { auth } from "../utils/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -21,6 +24,7 @@ const Login = () => {
     if (msg) return;
 
     if (!isSignIn) {
+      // Signed up
       const msg = checkValidName(name.current.value);
       setUserErrorMsg(msg);
       if (msg) return;
@@ -40,6 +44,22 @@ const Login = () => {
           setErrorMsg(errorCode + "-" + errorMessage);
         });
     } else {
+      // Signed in
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMsg(errorCode + "-" + errorMessage);
+        });
     }
   };
 
@@ -55,7 +75,7 @@ const Login = () => {
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className=" absolute w-4/12 bg-black p-12 mt-32 mx-auto right-0 left-0 text-white bg-opacity-85">
+        className=" absolute w-4/12 bg-black p-12 mt-24 mx-auto right-0 left-0 text-white bg-opacity-85">
         <h1 className="font-bold text-3xl pt-4 pb-8 px-2">
           {isSignIn ? "Sign In" : "Sign Up"}
         </h1>
