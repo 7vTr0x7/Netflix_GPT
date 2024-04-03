@@ -6,6 +6,7 @@ import { checkValidData, checkValidName } from "../utils/validate";
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
+  const [userErrorMsg, setUserErrorMsg] = useState("");
 
   const name = useRef(null);
   const email = useRef(null);
@@ -14,6 +15,7 @@ const Login = () => {
   const clickHandler = () => {
     if (!isSignIn) {
       const msg = checkValidName(name.current.value);
+      setUserErrorMsg(msg);
     }
     const msg = checkValidData(email.current.value, password.current.value);
     setErrorMsg(msg);
@@ -31,7 +33,7 @@ const Login = () => {
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className=" absolute w-3/12 bg-black p-12 mt-36 mx-auto right-0 left-0 text-white bg-opacity-85">
+        className=" absolute w-3/12 bg-black p-12 mt-32 mx-auto right-0 left-0 text-white bg-opacity-85">
         <h1 className="font-bold text-3xl pt-4 pb-8 px-2">
           {isSignIn ? "Sign In" : "Sign Up"}
         </h1>
@@ -55,7 +57,9 @@ const Login = () => {
           placeholder="Password"
           className="p-3 m-2 w-full  bg-[#333]"
         />
-        <p className="text-[#EB3932]  ml-3 mt-2 text-lg">{errorMsg}</p>
+        <p className="text-[#EB3932]  ml-3 mt-2 text-lg">
+          {userErrorMsg ? userErrorMsg : errorMsg}
+        </p>
 
         <button
           type="submit"
