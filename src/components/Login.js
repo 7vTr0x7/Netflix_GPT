@@ -1,23 +1,21 @@
-import React, { useRef, useState } from "react";
-import Header from "./Header";
-import { BACKGROUND_IMAGE, USER_AVATAR } from "../utils/constant";
-import { checkValidData, checkValidName } from "../utils/validate";
-import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
+import React, { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { BACKGROUND_IMAGE, USER_AVATAR } from "../utils/constant";
+import { auth } from "../utils/firebase";
 import { addUser } from "../utils/Redux/userSlice";
+import { checkValidData, checkValidName } from "../utils/validate";
+import Header from "./Header";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
   const [userErrorMsg, setUserErrorMsg] = useState("");
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const name = useRef(null);
   const email = useRef(null);
@@ -57,7 +55,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMsg(error.message);
@@ -78,7 +75,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
