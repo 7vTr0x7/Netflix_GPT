@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import Header from "./Header";
 import { BACKGROUND_IMAGE } from "../utils/constant";
 import { checkValidData, checkValidName } from "../utils/validate";
+import { auth } from "../utils/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -13,12 +15,32 @@ const Login = () => {
   const password = useRef(null);
 
   const clickHandler = () => {
+    const msg = checkValidData(email.current.value, password.current.value);
+    setErrorMsg(msg);
+
+    if (msg) return;
+
     if (!isSignIn) {
       const msg = checkValidName(name.current.value);
       setUserErrorMsg(msg);
+      if (msg) return;
+
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMsg(errorCode + "-" + errorMessage);
+        });
+    } else {
     }
-    const msg = checkValidData(email.current.value, password.current.value);
-    setErrorMsg(msg);
   };
 
   const toggleSignInForm = () => {
