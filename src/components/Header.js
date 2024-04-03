@@ -36,6 +36,7 @@ const Header = () => {
       }
     });
 
+    // Unsubscribe when component unmounts
     return () => unsubscribe();
   }, []);
 

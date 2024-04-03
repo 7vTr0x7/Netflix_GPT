@@ -18,6 +18,7 @@
        - Implemented Sign Out
        - Update Profile
        - Protected Routes
+       - Unmounting - unsubscribed to onAuthStateChanged call back  
  
     # Features
        - Login & Sign up
