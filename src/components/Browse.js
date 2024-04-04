@@ -1,32 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "./Header";
-import { API_OPTIONS } from "./../utils/constant";
-import { useDispatch } from "react-redux";
-import { addNowAiringSeries } from "../utils/Redux/seriesSlice";
 
+import useNowAiringSeries from "./../Hooks/useNowAiringSeries";
 const Browse = () => {
-  const dispatch = useDispatch();
-
-  const nowAiringSeries = async () => {
-    const data = await fetch(
-      "https://api.themoviedb.org/3/trending/tv/day?language=en-US",
-      API_OPTIONS
-    );
-    const json = await data.json();
-    dispatch(addNowAiringSeries(json.results));
-    console.log(json);
-  };
-
-  useEffect(() => {
-    const time = setTimeout(() => {
-      nowAiringSeries();
-    }, 3000);
-
-    return () => {
-      clearTimeout(time);
-    };
-  }, []);
-
+  useNowAiringSeries();
   return (
     <div>
       <Header />
