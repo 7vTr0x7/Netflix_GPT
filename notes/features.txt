@@ -18,7 +18,8 @@
        - Implemented Sign Out
        - Update Profile
        - Protected Routes
-       - Unmounting - unsubscribed to onAuthStateChanged call back  
+       - Unmounting - unsubscribed to onAuthStateChanged callback 
+       - TMDB API
  
     # Features
        - Login & Sign up

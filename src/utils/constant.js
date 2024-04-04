@@ -3,3 +3,12 @@ export const BACKGROUND_IMAGE =
 
 export const USER_AVATAR =
   "https://secure.gravatar.com/avatar/334c7ba02038cbb927ecfc119a8a866d?s=384";
+
+export const API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhZmEzZDNiMTg3MjY1ZjRkYmE5MjdlMzI1NGU2YjgzYyIsInN1YiI6IjY2MGU3NzhhMzU4MThmMDE3YzNkNjYwZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.eUdl8lYtmoiBOsbuRV1MV3QKc0HxqhlCI6YS-2rMOyw",
+  },
+};
