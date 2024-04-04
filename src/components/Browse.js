@@ -13,7 +13,13 @@ const Browse = () => {
   };
 
   useEffect(() => {
-    nowAiringSeries();
+    const time = setTimeout(() => {
+      nowAiringSeries();
+    }, 3000);
+
+    return () => {
+      clearTimeout(time);
+    };
   }, []);
 
   return (
