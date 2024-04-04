@@ -13,12 +13,13 @@ const useNowAiringSeries = () => {
     );
     const json = await data.json();
     dispatch(addNowAiringSeries(json.results));
+    console.log(json.results[0]);
   };
 
   useEffect(() => {
     const time = setTimeout(() => {
       nowAiringSeries();
-    }, 1000);
+    }, 2000);
 
     return () => {
       clearTimeout(time);
