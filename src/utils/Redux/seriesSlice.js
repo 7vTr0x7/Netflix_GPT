@@ -5,7 +5,7 @@ const seriesSlice = createSlice({
     nowAiringSeries: null,
     trailerVideo: null,
     trendingSeries: null,
-    airingToday : null;
+    airingToday: null,
   },
   reducers: {
     addNowAiringSeries: (state, action) => {
@@ -23,7 +23,11 @@ const seriesSlice = createSlice({
   },
 });
 
-export const { addNowAiringSeries, addTrailerVideo, addTrendingSeries ,addAiringTodaySeries} =
-  seriesSlice.actions;
+export const {
+  addNowAiringSeries,
+  addTrailerVideo,
+  addTrendingSeries,
+  addAiringTodaySeries,
+} = seriesSlice.actions;
 
 export default seriesSlice.reducer;
