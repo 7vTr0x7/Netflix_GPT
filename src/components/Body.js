@@ -6,7 +6,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 const Body = () => {
   return (
-    <div>
+    <div className="bg-black">
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />

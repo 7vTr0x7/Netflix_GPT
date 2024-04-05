@@ -7,7 +7,7 @@ const SecondaryContainer = () => {
   if (!series) return;
 
   return (
-    <div>
+    <div className="relative -mt-52 z-20">
       <MovieList title={"Now Airing"} series={series.nowAiringSeries} />
       <MovieList title={"Trending"} series={series.nowAiringSeries} />
       <MovieList title={"On Air"} series={series.nowAiringSeries} />
