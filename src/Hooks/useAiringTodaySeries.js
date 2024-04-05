@@ -8,7 +8,7 @@ const useAiringTodaySeries = () => {
 
   const gatAiringTodaySeries = async () => {
     const data = await fetch(
-      "https://api.themoviedb.org/3/tv/airing_today?language=en-US&page=1",
+      "https://api.themoviedb.org/3/trending/movie/day?language=en-US",
       API_OPTIONS
     );
     const json = await data.json();
