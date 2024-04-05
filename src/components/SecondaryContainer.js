@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 const SecondaryContainer = () => {
   const series = useSelector((store) => store.series);
+  if (!series) return;
 
   return (
     <div>
