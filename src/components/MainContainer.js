@@ -7,11 +7,13 @@ const MainContainer = () => {
   const series = useSelector((store) => store.series?.nowAiringSeries);
   if (!series) return;
 
-  const mainSeries = series[6];
+  const mainSeries = series.filter(
+    (series) => series.original_name === "Shōgun"
+  );
 
-  if (!mainSeries) return;
+  if (!mainSeries[0]) return;
 
-  const { original_name, overview, id } = mainSeries;
+  const { original_name, overview, id } = mainSeries[0];
   return (
     <div>
       <VideoTitle title={original_name} overview={overview} />
