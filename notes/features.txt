@@ -27,6 +27,7 @@
        - Fetched Series Trailer Data
        - Updated store with trailer data
        - Embedded Yt video + autoPlay & mute
+       - Build SecondaryContainer
  
     # Features
        - Login & Sign up
