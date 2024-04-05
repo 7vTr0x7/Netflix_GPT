@@ -37,6 +37,7 @@ export const {
   addTrendingSeries,
   addAiringTodaySeries,
   addPopularSeries,
+  addTopRatedSeries,
 } = seriesSlice.actions;
 
 export default seriesSlice.reducer;
