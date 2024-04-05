@@ -7,12 +7,13 @@ const MainContainer = () => {
   const series = useSelector((store) => store.series?.nowAiringSeries);
   if (!series) return;
 
-  const mainSeries = series[0];
+  const mainSeries = series[6];
   console.log(mainSeries);
 
+  const { original_name, overview } = mainSeries;
   return (
     <div>
-      <VideoTitle />
+      <VideoTitle title={original_name} overview={overview} />
       <VideoBackground />
     </div>
   );

@@ -13,7 +13,6 @@ const useNowAiringSeries = () => {
     );
     const json = await data.json();
     dispatch(addNowAiringSeries(json.results));
-    console.log(json.results[0]);
   };
 
   useEffect(() => {
