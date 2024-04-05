@@ -1,6 +1,9 @@
 import { API_OPTIONS } from "./../utils/constant";
 import { useDispatch } from "react-redux";
-import { addNowAiringSeries } from "../utils/Redux/seriesSlice";
+import {
+  addNowAiringSeries,
+  addPopularSeries,
+} from "../utils/Redux/seriesSlice";
 import { useEffect } from "react";
 
 const usePopularSeries = () => {
@@ -8,11 +11,11 @@ const usePopularSeries = () => {
 
   const getPopularSeries = async () => {
     const data = await fetch(
-      "https://api.themoviedb.org/3/trending/tv/day?language=en-US",
+      "https://api.themoviedb.org/3/tv/popular?language=en-US&page=1",
       API_OPTIONS
     );
     const json = await data.json();
-    dispatch(addNowAiringSeries(json.results));
+    dispatch(addPopularSeries(json.results));
   };
 
   useEffect(() => {

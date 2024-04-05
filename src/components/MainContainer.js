@@ -4,12 +4,13 @@ import VideoTitle from "./VideoTitle";
 import VideoBackground from "./VideoBackground";
 
 const MainContainer = () => {
-  const series = useSelector((store) => store.series?.nowAiringSeries);
+  const series = useSelector((store) => store.series?.trendingSeries);
   if (!series) return;
 
-  const mainSeries = series.filter(
+  const mainSeries = series?.filter(
     (series) => series.original_name === "Shōgun"
   );
+  console.log(mainSeries);
 
   if (!mainSeries[0]) return;
 
