@@ -7,6 +7,7 @@ const seriesSlice = createSlice({
     trendingSeries: null,
     airingToday: null,
     popularSeries: null,
+    topRatedSeries: null,
   },
   reducers: {
     addNowAiringSeries: (state, action) => {
@@ -20,6 +21,9 @@ const seriesSlice = createSlice({
     },
     addPopularSeries: (state, action) => {
       state.popularSeries = action.payload;
+    },
+    addTopRatedSeries: (state, action) => {
+      state.topRatedSeries = action.payload;
     },
     addTrailerVideo: (state, action) => {
       state.trailerVideo = action.payload;
