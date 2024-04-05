@@ -6,11 +6,13 @@ import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
 import useAiringTodaySeries from "../Hooks/useAiringTodaySeries";
 import useNowAiringSeries from "../Hooks/useNowAiringSeries";
+import usePopularSeries from "../Hooks/usePopularSeries";
 
 const Browse = () => {
   useTrendingSeries();
   useAiringTodaySeries();
   useNowAiringSeries();
+  usePopularSeries();
   return (
     <div>
       <Header />
