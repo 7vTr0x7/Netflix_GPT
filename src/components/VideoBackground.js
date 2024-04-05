@@ -10,6 +10,7 @@ const VideoBackground = ({ seriesId }) => {
   return (
     <div>
       <iframe
+        className="w-screen aspect-video"
         src={"https://www.youtube.com/embed/yAN5uspO_hk?si=-" + trailer?.key}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
