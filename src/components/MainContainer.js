@@ -8,14 +8,14 @@ const MainContainer = () => {
   if (!series) return;
 
   const mainSeries = series[6];
-  console.log(mainSeries);
+
   if (!mainSeries) return;
 
-  const { original_name, overview } = mainSeries;
+  const { original_name, overview, id } = mainSeries;
   return (
     <div>
       <VideoTitle title={original_name} overview={overview} />
-      <VideoBackground />
+      <VideoBackground seriesId={id} />
     </div>
   );
 };
