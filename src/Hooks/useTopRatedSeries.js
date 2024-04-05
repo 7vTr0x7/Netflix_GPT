@@ -1,23 +1,23 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { API_OPTIONS } from "../utils/constant";
-import { addAiringTodaySeries } from "../utils/Redux/seriesSlice";
+import { addTopRatedSeries } from "../utils/Redux/seriesSlice";
 
-const useAiringTodaySeries = () => {
+const useTopRatedSeries = () => {
   const dispatch = useDispatch();
 
-  const gatAiringTodaySeries = async () => {
+  const getTopRatedSeries = async () => {
     const data = await fetch(
-      "https://api.themoviedb.org/3/trending/movie/day?language=en-US",
+      "https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1",
       API_OPTIONS
     );
     const json = await data.json();
-    dispatch(addAiringTodaySeries(json.results));
+    dispatch(addTopRatedSeries(json.results));
   };
 
   useEffect(() => {
     const time = setTimeout(() => {
-      gatAiringTodaySeries();
+      getTopRatedSeries();
     }, 2000);
 
     return () => {
@@ -26,4 +26,4 @@ const useAiringTodaySeries = () => {
   }, []);
 };
 
-export default useAiringTodaySeries;
+export default useTopRatedSeries;
