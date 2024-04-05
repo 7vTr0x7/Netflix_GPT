@@ -28,6 +28,9 @@
        - Updated store with trailer data
        - Embedded Yt video + autoPlay & mute
        - Build SecondaryContainer
+       - Build Movie Lists
+       - Build Movie Cards
+       - useTopRatedMovies + useTopRatedSeries + useTrendingMovies - custom hooks 
  
     # Features
        - Login & Sign up
