@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./Header";
 
-import useNowAiringSeries from "./../Hooks/useNowAiringSeries";
+import useTrendingSeries from "./../Hooks/useTrendingSeries";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
 
 const Browse = () => {
-  useNowAiringSeries();
+  useTrendingSeries();
   return (
     <div>
       <Header />

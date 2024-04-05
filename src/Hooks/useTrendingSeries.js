@@ -1,12 +1,12 @@
-import { API_OPTIONS } from "./../utils/constant";
+import { API_OPTIONS } from "../utils/constant";
 import { useDispatch } from "react-redux";
 import { addNowAiringSeries } from "../utils/Redux/seriesSlice";
 import { useEffect } from "react";
 
-const useNowAiringSeries = () => {
+const useTrendingSeries = () => {
   const dispatch = useDispatch();
 
-  const nowAiringSeries = async () => {
+  const getTrendingSeries = async () => {
     const data = await fetch(
       "https://api.themoviedb.org/3/trending/tv/day?language=en-US",
       API_OPTIONS
@@ -17,7 +17,7 @@ const useNowAiringSeries = () => {
 
   useEffect(() => {
     const time = setTimeout(() => {
-      nowAiringSeries();
+      getTrendingSeries();
     }, 2000);
 
     return () => {
@@ -26,4 +26,4 @@ const useNowAiringSeries = () => {
   }, []);
 };
 
-export default useNowAiringSeries;
+export default useTrendingSeries;

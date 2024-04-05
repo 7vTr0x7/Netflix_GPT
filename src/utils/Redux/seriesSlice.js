@@ -4,6 +4,7 @@ const seriesSlice = createSlice({
   initialState: {
     nowAiringSeries: null,
     trailerVideo: null,
+    trendingSeries: null,
   },
   reducers: {
     addNowAiringSeries: (state, action) => {
