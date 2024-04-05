@@ -9,6 +9,8 @@ const SecondaryContainer = () => {
   return (
     <div>
       <MovieList title={"Now Airing"} series={series.nowAiringSeries} />
+      <MovieList title={"Trending"} series={series.nowAiringSeries} />
+      <MovieList title={"On Air"} series={series.nowAiringSeries} />
     </div>
   );
 };
