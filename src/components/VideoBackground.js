@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { API_OPTIONS } from "./../utils/constant";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addTrailerVideo } from "../utils/Redux/seriesSlice";
 
 const VideoBackground = ({ seriesId }) => {
   const dispatch = useDispatch();
+  const trailer = useSelector((store) => store.series?.trailerVideo);
 
   const getSeriesVideo = async () => {
     const data = await fetch(
@@ -30,7 +31,7 @@ const VideoBackground = ({ seriesId }) => {
   return (
     <div>
       <iframe
-        src="https://www.youtube.com/embed/yAN5uspO_hk?si=-R7Kdqir1zTVl576"
+        src={"https://www.youtube.com/embed/yAN5uspO_hk?si=-" + trailer?.key}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"></iframe>
