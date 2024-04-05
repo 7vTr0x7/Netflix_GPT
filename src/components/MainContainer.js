@@ -9,6 +9,7 @@ const MainContainer = () => {
 
   const mainSeries = series[6];
   console.log(mainSeries);
+  if (!mainSeries) return;
 
   const { original_name, overview } = mainSeries;
   return (
