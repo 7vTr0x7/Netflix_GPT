@@ -21,6 +21,12 @@
        - Unmounting - unsubscribed to onAuthStateChanged callback 
        - TMDB API
        - useNowAiringSeries - custom hook
+       - Created seriesSlice
+       - Updated Redux Store with series data
+       - Planning of MainContainer & SecondaryContainer
+       - Fetched Series Trailer Data
+       - Updated store with trailer data
+       - Embedded Yt video + autoPlay & mute
  
     # Features
        - Login & Sign up
