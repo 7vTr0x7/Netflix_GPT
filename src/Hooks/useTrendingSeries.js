@@ -1,7 +1,7 @@
-import { API_OPTIONS } from "../utils/constant";
-import { useDispatch } from "react-redux";
-import { addNowAiringSeries } from "../utils/Redux/seriesSlice";
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { API_OPTIONS } from "../utils/constant";
+import { addTrendingSeries } from "../utils/Redux/seriesSlice";
 
 const useTrendingSeries = () => {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ const useTrendingSeries = () => {
       API_OPTIONS
     );
     const json = await data.json();
-    dispatch(addNowAiringSeries(json.results));
+    dispatch(addTrendingSeries(json.results));
   };
 
   useEffect(() => {
