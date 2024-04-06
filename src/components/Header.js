@@ -66,7 +66,7 @@ const Header = () => {
             ))}
           </select>
           <button
-            className="text-[#e50914]  rounded-md uppercase font-bold text-2xl bg-gradient-to-t from-black p-1 shadow-2xl  "
+            className="text-white rounded-md uppercase font-bold text-xl bg-gradient-to-t from-black p-1 shadow-2xl  "
             onClick={handleToggleSearch}>
             Search
           </button>
@@ -76,7 +76,7 @@ const Header = () => {
             src={user.photoURL}
           />
           <button
-            className="text-[#e50914] font-bold text-xl bg-gradient-to-t from-black p-1 rounded-md uppercase "
+            className="text-white font-bold text-xl bg-gradient-to-t from-black p-1 rounded-md uppercase "
             onClick={handleSignOut}>
             SignOut
           </button>
