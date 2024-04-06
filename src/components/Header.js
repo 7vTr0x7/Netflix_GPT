@@ -53,8 +53,8 @@ const Header = () => {
       <img className="w-52 h-24" src={logo} alt="logo" />
 
       {user && (
-        <div className="flex items-center">
-          <button className="text-[#e50914] font-bold text-2xl bg-gradient-to-t from-black p-1 rounded-md ">
+        <div className="flex items-center ">
+          <button className="text-[#e50914] uppercase  font-bold text-2xl bg-gradient-to-t from-black p-1 rounded-md ">
             Search
           </button>
           <img
@@ -63,7 +63,7 @@ const Header = () => {
             src={user.photoURL}
           />
           <button
-            className="text-[#e50914] font-bold text-xl bg-gradient-to-t from-black p-1 rounded-md "
+            className="text-[#e50914] font-bold text-xl bg-gradient-to-t from-black p-1 rounded-md uppercase "
             onClick={handleSignOut}>
             SignOut
           </button>
