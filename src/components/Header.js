@@ -10,6 +10,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/Redux/userSlice";
 import { toggleSearchView } from "../utils/Redux/searchSlice";
+import { SUPPORTED_LANG } from "../utils/constant";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -59,8 +60,13 @@ const Header = () => {
 
       {user && (
         <div className="flex items-center ">
+          <select className=" w-auto mx-2 mt-1 p-1  rounded-md text-white bg-black ">
+            {SUPPORTED_LANG.map((lang) => (
+              <option value={lang.identifier}>{lang.name}</option>
+            ))}
+          </select>
           <button
-            className="text-[#e50914] uppercase font-bold text-2xl bg-gradient-to-t from-black p-1 shadow-2xl rounded-md "
+            className="text-[#e50914]  rounded-md uppercase font-bold text-2xl bg-gradient-to-t from-black p-1 shadow-2xl  "
             onClick={handleToggleSearch}>
             Search
           </button>
