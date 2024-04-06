@@ -31,6 +31,7 @@
        - Build Movie Lists
        - Build Movie Cards
        - useTopRatedMovies + useTopRatedSeries + useTrendingMovies - custom hooks 
+       - GPT Search api
  
     # Features
        - Login & Sign up

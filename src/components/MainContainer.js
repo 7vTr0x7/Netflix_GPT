@@ -7,17 +7,16 @@ const MainContainer = () => {
   const series = useSelector((store) => store.series?.trendingSeries);
   if (!series) return;
 
-  const mainSeries = series?.filter(
-    (series) => series.original_name === "Shōgun"
-  );
-  console.log(mainSeries);
+  console.log(series);
+
+  const mainSeries = series?.filter((series) => series.name === "Shōgun");
 
   if (!mainSeries[0]) return;
 
-  const { original_name, overview, id } = mainSeries[0];
+  const { name, overview, id } = mainSeries[0];
   return (
     <div>
-      <VideoTitle title={original_name} overview={overview} />
+      <VideoTitle title={name} overview={overview} />
       <VideoBackground seriesId={id} />
     </div>
   );

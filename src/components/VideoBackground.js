@@ -3,8 +3,7 @@ import { useSelector } from "react-redux";
 import useSeriesTrailer from "../Hooks/useSeriesTrailer";
 
 const VideoBackground = ({ seriesId }) => {
-  const trailer = useSelector((store) => store.series?.trailerVideo);
-
+  const trailer = useSelector((store) => store?.series?.trailerVideo);
   useSeriesTrailer(seriesId);
 
   return (
@@ -12,7 +11,7 @@ const VideoBackground = ({ seriesId }) => {
       <iframe
         className="w-screen aspect-video"
         src={
-          "https://www.youtube.com/embed/yAN5uspO_hk?si=-" +
+          "https://www.youtube.com/embed/" +
           trailer?.key +
           "?&autoplay=1&mute=1&loop=1"
         }

@@ -53,16 +53,19 @@ const Header = () => {
       <img className="w-52 h-24" src={logo} alt="logo" />
 
       {user && (
-        <div className="flex p-3">
+        <div className="flex items-center">
+          <button className="text-[#e50914] font-bold text-2xl bg-gradient-to-t from-black p-1 rounded-md ">
+            Search
+          </button>
           <img
-            className="h-12 w-12 rounded-lg m-3"
+            className="h-12 w-12 rounded-lg mx-3 shadow-2xl"
             alt="user"
             src={user.photoURL}
           />
           <button
-            className="text-[#e50914] font-bold text-xl"
+            className="text-[#e50914] font-bold text-xl bg-gradient-to-t from-black p-1 rounded-md "
             onClick={handleSignOut}>
-            Sign Out
+            SignOut
           </button>
         </div>
       )}
