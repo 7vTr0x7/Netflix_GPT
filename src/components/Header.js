@@ -9,6 +9,7 @@ import { onAuthStateChanged } from "firebase/auth";
 
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/Redux/userSlice";
+import { toggleSearchView } from "../utils/Redux/searchSlice";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -48,13 +49,19 @@ const Header = () => {
       });
   };
 
+  const handleToggleSearch = () => {
+    dispatch(toggleSearchView());
+  };
+
   return (
     <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between">
       <img className="w-52 h-24" src={logo} alt="logo" />
 
       {user && (
         <div className="flex items-center ">
-          <button className="text-[#e50914] uppercase  font-bold text-2xl bg-gradient-to-t from-black p-1 rounded-md ">
+          <button
+            className="text-[#e50914] uppercase  font-bold text-2xl bg-gradient-to-t from-black p-1 rounded-md "
+            onClick={handleToggleSearch}>
             Search
           </button>
           <img

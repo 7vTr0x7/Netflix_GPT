@@ -8,18 +8,27 @@ import SecondaryContainer from "./SecondaryContainer";
 import useTopRatedSeries from "../Hooks/useTopRatedSeries";
 import useTopRatedMovies from "../Hooks/useTopRatedMovies";
 import Search from "./Search";
+import { useSelector } from "react-redux";
 
 const Browse = () => {
   useTrendingSeries();
   useTopRatedSeries();
   useTrendingMovies();
   useTopRatedMovies();
+
+  const search = useSelector((store) => store?.search);
+
   return (
     <div>
       <Header />
-      <Search />
-      <MainContainer />
-      <SecondaryContainer />
+      {search.showSearch ? (
+        <Search />
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
     </div>
   );
 };
