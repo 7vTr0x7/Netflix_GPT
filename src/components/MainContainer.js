@@ -7,8 +7,6 @@ const MainContainer = () => {
   const series = useSelector((store) => store.series?.trendingSeries);
   if (!series) return;
 
-  console.log(series);
-
   const mainSeries = series?.filter((series) => series.name === "Shōgun");
 
   if (!mainSeries[0]) return;

@@ -4,7 +4,6 @@ import { addTrailerVideo } from "../utils/Redux/seriesSlice";
 import { API_OPTIONS } from "../utils/constant";
 
 const useSeriesTrailer = (seriesId) => {
-  console.log(seriesId);
   const dispatch = useDispatch();
 
   const getSeriesVideo = async () => {
