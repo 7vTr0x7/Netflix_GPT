@@ -60,7 +60,7 @@ const Header = () => {
       {user && (
         <div className="flex items-center ">
           <button
-            className="text-[#e50914] uppercase  font-bold text-2xl bg-gradient-to-t from-black p-1 rounded-md "
+            className="text-[#e50914] uppercase font-bold text-2xl bg-gradient-to-t from-black p-1 shadow-2xl rounded-md "
             onClick={handleToggleSearch}>
             Search
           </button>

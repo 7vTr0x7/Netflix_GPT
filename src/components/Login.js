@@ -126,7 +126,7 @@ const Login = () => {
 
         <button
           type="submit"
-          className="py-3 mt-8 mb-4 mx-2  bg-[#e50914] w-full rounded-lg font-bold text-xl  "
+          className="py-3 mt-8 mb-4 mx-2  bg-gradient-to-t from-[#e50914] w-full rounded-lg font-bold text-xl  "
           onClick={clickHandler}>
           {isSignIn ? "Sign In" : "Sign Up"}
         </button>
