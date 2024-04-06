@@ -8,6 +8,10 @@ export const lang = {
       "IN JAPAN IN THE YEAR 1600, AT THE DAWN OF A CENTURY-DEFINING CIVIL WAR, LORD YOSHII TORANAGA IS FIGHTING FOR HIS LIFE AS HIS ENEMIES ON THE COUNCIL OF REGENTS UNITE AGAINST HIM, WHEN A MYSTERIOUS EUROPEAN SHIP IS FOUND MAROONED IN A NEARBY FISHING VILLAGE",
     play: "Play",
     moreInfo: "More Info",
+    trendingSeries: "Trending Series",
+    trendingMovies: "Trending Movies",
+    topRatedMovies: "Top Rated Movies",
+    topRatedSeries: "Top Rated Series",
   },
   ja: {
     search: "検索",
@@ -18,5 +22,9 @@ export const lang = {
       "1600年の日本、一世紀を決定づけた内戦の黎明期、吉井虎長公は摂政会議の敵が結束して命がけで戦っていたとき、謎のヨーロッパ船が近くの漁場で取り残されているのが発見された。村",
     play: "遊ぶ",
     moreInfo: "より詳しい情報",
+    trendingSeries: "トレンドシリーズ",
+    trendingMovies: "話題の映画",
+    topRatedMovies: "最高評価の映画",
+    topRatedSeries: "最高評価のシリーズ",
   },
 };
