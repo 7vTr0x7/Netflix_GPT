@@ -1,7 +1,14 @@
 import React from "react";
+import SearchBar from "./SearchBar";
+import SearchSuggestions from "./SearchSuggestions";
 
 const Search = () => {
-  return <div>Search</div>;
+  return (
+    <div>
+      <SearchBar />
+      <SearchSuggestions />
+    </div>
+  );
 };
 
 export default Search;
