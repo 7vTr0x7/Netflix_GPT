@@ -71,9 +71,11 @@ const Header = () => {
           <select
             className=" w-auto mx-2 mt-1 p-1  rounded-md text-white bg-black "
             onChange={handleLangChange}>
-            {SUPPORTED_LANG.map((lang) => (
-              <option key={lang.identifier} value={lang.identifier}>
-                {lang.name}
+            {SUPPORTED_LANG.map((language) => (
+              <option key={language.identifier} value={language.identifier}>
+                {language.identifier === "en"
+                  ? lang[selectedLang].english
+                  : lang[selectedLang].japanese}
               </option>
             ))}
           </select>

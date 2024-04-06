@@ -12,6 +12,8 @@ export const lang = {
     trendingMovies: "Trending Movies",
     topRatedMovies: "Top Rated Movies",
     topRatedSeries: "Top Rated Series",
+    english: "English",
+    japanese: "Japanese",
   },
   ja: {
     search: "検索",
@@ -26,5 +28,7 @@ export const lang = {
     trendingMovies: "話題の映画",
     topRatedMovies: "最高評価の映画",
     topRatedSeries: "最高評価のシリーズ",
+    english: "英語",
+    japanese: "日本語",
   },
 };
