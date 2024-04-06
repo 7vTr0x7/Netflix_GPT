@@ -14,6 +14,7 @@ export const lang = {
     topRatedSeries: "Top Rated Series",
     english: "English",
     japanese: "Japanese",
+    home: "Home",
   },
   ja: {
     search: "検索",
@@ -30,5 +31,6 @@ export const lang = {
     topRatedSeries: "最高評価のシリーズ",
     english: "英語",
     japanese: "日本語",
+    home: "ホームページ",
   },
 };

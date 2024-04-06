@@ -19,6 +19,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const selectedLang = useSelector((store) => store.config.lang);
+  const showSearch = useSelector((store) => store.search.showSearch);
 
   const user = useSelector((store) => store.user);
 
@@ -82,7 +83,7 @@ const Header = () => {
           <button
             className="text-white rounded-md uppercase font-bold text-xl bg-gradient-to-t from-black p-1 shadow-2xl  "
             onClick={handleToggleSearch}>
-            {lang[selectedLang].search}
+            {showSearch ? lang[selectedLang].home : lang[selectedLang].search}
           </button>
           <img
             className="h-12 w-12 rounded-lg mx-3 shadow-2xl"
