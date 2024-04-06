@@ -7,6 +7,7 @@ import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
 import useTopRatedSeries from "../Hooks/useTopRatedSeries";
 import useTopRatedMovies from "../Hooks/useTopRatedMovies";
+import Search from "./Search";
 
 const Browse = () => {
   useTrendingSeries();
@@ -16,6 +17,7 @@ const Browse = () => {
   return (
     <div>
       <Header />
+      <Search />
       <MainContainer />
       <SecondaryContainer />
     </div>
