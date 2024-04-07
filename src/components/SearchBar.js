@@ -8,11 +8,9 @@ const SearchBar = () => {
 
   const searchText = useRef(null);
 
-  if (searchText.current === null) return;
-
   const gptQuery =
     "Act as a Movie/Series recommendation system and suggest some movies for the query" +
-    searchText.current.value +
+    searchText?.current?.value +
     ". only give 5 names of it, comma separated like the example given ahead. Example Results: shogun,solo leveling,dune,attack on titan,x-men";
 
   const handleSearch = async () => {
