@@ -32,9 +32,7 @@ const SearchBar = () => {
           className="py-2 px-4 m-4 col-span-9 rounded-lg bg-[#333] text-white"
           placeholder={lang[selectedLang].searchPlaceholder}
         />
-        <button
-          className="py-2 px-4 m-4 col-span-3 text-white uppercase font-bold bg-gradient-to-t  from-[#e50914] rounded-lg"
-          onClick={handleSearch}>
+        <button className="py-2 px-4 m-4 col-span-3 text-white uppercase font-bold bg-gradient-to-t  from-[#e50914] rounded-lg">
           {lang[selectedLang].search}
         </button>
       </form>
