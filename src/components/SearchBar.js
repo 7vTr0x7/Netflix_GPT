@@ -8,19 +8,19 @@ const SearchBar = () => {
 
   const searchText = useRef(null);
 
-  const gptQuery =
-    "Act as a Movie/Series recommendation system and suggest some movies for the query" +
-    searchText?.current?.value +
-    ". only give 5 names of it, comma separated like the example given ahead. Example Results: shogun,solo leveling,dune,attack on titan,x-men";
+  // const gptQuery =
+  //   "Act as a Movie/Series recommendation system and suggest some movies for the query" +
+  //   searchText?.current?.value +
+  //   ". only give 5 names of it, comma separated like the example given ahead. Example Results: shogun,solo leveling,dune,attack on titan,x-men";
 
-  const handleSearch = async () => {
-    const data = await openai.chat.completions.create({
-      messages: [{ role: "user", content: gptQuery }],
-      model: "gpt-3.5-turbo",
-    });
+  // const handleSearch = async () => {
+  //   const data = await openai.chat.completions.create({
+  //     messages: [{ role: "user", content: gptQuery }],
+  //     model: "gpt-3.5-turbo",
+  //   });
 
-    console.log(data.choices);
-  };
+  //   console.log(data.choices);
+  // };
 
   return (
     <div className="pt-[7%] flex justify-center">
