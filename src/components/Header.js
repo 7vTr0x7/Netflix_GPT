@@ -65,8 +65,10 @@ const Header = () => {
 
   return (
     <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between">
-      <img className="w-52 h-24" src={logo} alt="logo" />
-
+      {/* <img className="w-52 h-24" src={logo} alt="logo" /> */}
+      <h1 className="w-52 h-24 text-5xl pt-6 font-bold text-[#e50914]">
+        ShowFlix
+      </h1>
       {user && (
         <div className="flex items-center ">
           <select
