@@ -14,6 +14,8 @@ export const lang = {
     topRatedSeries: "Top Rated Series",
     english: "English",
     japanese: "Japanese",
+    marathi: "Marathi",
+
     home: "Home",
   },
   ja: {
@@ -31,6 +33,25 @@ export const lang = {
     topRatedSeries: "最高評価のシリーズ",
     english: "英語",
     japanese: "日本語",
+    marathi: "マラーティー語",
     home: "ホームページ",
+  },
+  ma: {
+    search: "शोधा",
+    searchPlaceholder: "तुम्हाला आज काय बघायला आवडेल?",
+    signOut: "साइन आउट",
+    title: "शोगुन",
+    overview:
+      "1600 साली जपानमध्ये, एका शताब्दी-परिभाषित गृहयुद्धाच्या पहाटे, लॉर्ड योशी तोरनागा हे आपल्या जीवनासाठी रीजेंट्स अयुनिगियन्स कौन्सिलमध्ये लढत आहेत जवळच्या मासेमारीत सापडले गाव",
+    play: "प्ले",
+    moreInfo: "अधिक माहिती",
+    trendingSeries: "ट्रेंडिंग मालिका",
+    trendingMovies: "ट्रेंडिंग चित्रपट",
+    topRatedMovies: "शीर्ष रेट केलेले चित्रपट",
+    topRatedSeries: "शीर्ष रेटेड मालिका",
+    english: "इंग्रजी",
+    japanese: "जपानी",
+    marathi: "मराठी",
+    home: "मुख्यपृष्ठ",
   },
 };

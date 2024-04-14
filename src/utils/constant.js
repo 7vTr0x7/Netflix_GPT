@@ -24,4 +24,8 @@ export const SUPPORTED_LANG = [
     identifier: "ja",
     name: "Japanese",
   },
+  {
+    identifier: "ma",
+    name: "Marathi",
+  },
 ];
